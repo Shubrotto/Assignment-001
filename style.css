@@ -184,15 +184,18 @@ body {
 
 .about_me_info_left {
   flex: 2;
-  width: 90%;
 }
 
 .about_me_info_left p {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 27.2px;
-  margin-bottom: 10px;
-  width: 97%;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.about_me_desc {
+  width: 94%;
 }
 
 .about_me_info_right {
