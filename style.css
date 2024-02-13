@@ -10,12 +10,43 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+/* common css */
+
+#common-section-gray {
+  background: #f2f2f2;
+}
+
+.common-wrapper {
+  padding: 120px 255px 120px 255px;
+}
+
+.title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 43.57px;
+  margin: 0 15px;
+}
+
+.title_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title_wrapper hr {
+  width: 36.3775%;
+  border: 1px solid #1f1f1f;
+  opacity: 0.5;
+}
+
 /* header section start */
 
 #header {
   padding: 25px 160px 25px 160px;
-  z-index: 10;
-  background: teal;
+  z-index: 100;
+  background: #ffffff;
+  /* position: fixed; */
 }
 
 .wrapper {
@@ -26,6 +57,7 @@ body {
 
 .header_left {
   flex: 1;
+  margin-bottom: 7.5px;
 }
 
 .logo {
@@ -68,7 +100,6 @@ body {
   padding: 10px;
   font-size: 16px;
   font-weight: normal;
-  transition: 0.7s ease-in-out;
 }
 
 .navbar_left ul li a:hover {
@@ -140,8 +171,38 @@ body {
 
 .info_arrow i {
   font-size: 32px;
-  margin-bottom: -16px;
-  color: rgb(99, 99, 99);
+  color: rgb(87, 87, 87);
+  cursor: pointer;
+}
+/* info section end */
+
+/* About-me section start */
+.about_me_info {
+  display: flex;
+  margin-top: 50px;
 }
 
-/* info section end */
+.about_me_info_left {
+  flex: 2;
+  width: 90%;
+}
+
+.about_me_info_left p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 27.2px;
+  margin-bottom: 10px;
+  width: 97%;
+}
+
+.about_me_info_right {
+  flex: 1;
+  margin-top: 9px;
+}
+
+.about_me_info_right img {
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+}
+/* About-me section end */
