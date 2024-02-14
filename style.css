@@ -509,6 +509,7 @@ p {
 /* contact section start */
 #contact {
   background: white;
+  position: relative;
 }
 
 .contact_title_wrapper {
@@ -552,4 +553,22 @@ p {
   border-radius: 5px;
   border: 1px solid #1f1f1f;
 }
+
+.contact_social_icon {
+  position: absolute;
+  bottom: -215.8rem;
+  left: 37rem;
+  font-size: 20px;
+}
 /* contact section end */
+
+footer {
+  padding: 10px 0;
+}
+
+footer p {
+  text-align: center;
+  font-size: 14px;
+  line-height: 23.8px;
+  font-weight: 400;
+}
