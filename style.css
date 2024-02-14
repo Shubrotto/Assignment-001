@@ -331,5 +331,117 @@ p {
   font-weight: 400;
   line-height: 23.8px;
 }
-
 /* Experience section end */
+
+/* Feature-Project section start */
+.title_wrapper_featured {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title_wrapper_featured hr {
+  width: 28.9%;
+  border: 1px solid #1f1f1f;
+  opacity: 0.5;
+}
+
+.title_wrapper_featured h2 {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 43.57px;
+  margin: 0 10px;
+}
+
+.featured_project_info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 67px;
+}
+
+.featured_project_info_top {
+  display: flex;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.feat_pro_in_top_l,
+.feat_pro_in_bottom_r {
+  width: 95%;
+  height: 249px;
+  border-radius: 0 5px 5px 0;
+  background: #c4c4c4;
+  margin-right: 10px;
+}
+
+.feat_pro_in_top_r {
+  width: 100%;
+  padding: 30px 0;
+}
+
+.feat_pro_in_top_r h3,
+.feat_pro_in_bottom_l h3 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36.31px;
+}
+
+.feat_pro_in_top_r p,
+.feat_pro_in_bottom_l p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27.2px;
+  margin-bottom: 8px;
+}
+
+.feat_pro_in_top_r hr,
+.feat_pro_in_bottom_l hr {
+  margin-bottom: 8px;
+}
+
+.skill span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 23.8px;
+  margin-right: 8px;
+}
+
+.icon {
+  margin-top: 5px;
+  font-size: 16px;
+  color: #1f1f1f;
+}
+
+.icon i {
+  margin-right: 5px;
+}
+
+.featured_project_info_bottom {
+  display: flex;
+  flex: 1;
+  margin-top: 20px;
+}
+
+.feat_pro_in_bottom_l {
+  width: 95%;
+  padding: 30px 0;
+}
+
+.feat_pro_in_bottom_r {
+  margin-left: 10px;
+}
+
+.feat_pro_in_bottom_l h3,
+.feat_pro_in_bottom_l p,
+.feat_pro_in_bottom_l hr,
+.feat_pro_in_bottom_l .skill,
+.feat_pro_in_bottom_l .icon {
+  text-align: end;
+}
+/* Feature-Project section end */
+
+/* Other-Project section end */
+.other-wrapper {
+  padding: 0 120px 100px 120px;
+}
+/* Other-Project section end */
