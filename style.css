@@ -505,3 +505,51 @@ p {
   display: flex;
 }
 /* Other-Project section end */
+
+/* contact section start */
+#contact {
+  background: white;
+}
+
+.contact_title_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.contact_title_wrapper hr {
+  width: 38.3775%;
+  border: 1px solid #1f1f1f;
+  opacity: 0.5;
+}
+
+.contact_title_wrapper .title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 43.57px;
+}
+
+.contact_form {
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.contact_form p {
+  text-align: center;
+  font-size: 16px;
+  line-height: 27.2px;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+.contact_form button {
+  padding: 8px 10px 8px 10px;
+  border-radius: 5px;
+  border: 1px solid #1f1f1f;
+}
+/* contact section end */
