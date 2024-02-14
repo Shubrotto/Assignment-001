@@ -442,6 +442,66 @@ p {
 
 /* Other-Project section end */
 .other-wrapper {
-  padding: 0 120px 100px 120px;
+  padding: 0 255px 100px 255px;
+}
+
+.title_wrapper_project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title_wrapper_project hr {
+  width: 32.8%;
+  border: 1px solid #1f1f1f;
+  opacity: 0.5;
+}
+
+.title_wrapper_project h2 {
+  margin: 0 10px;
+}
+
+.other_project_info {
+  margin-bottom: 22px;
+}
+
+.other_project_info_top {
+  display: flex;
+  margin-top: 38px;
+}
+
+.other_project_info_top_l,
+.other_project_info_top_r {
+  display: flex;
+  margin-bottom: 26px;
+}
+
+.other_project_info_top_l_l {
+  width: 90px;
+  height: 90px;
+  background: #c4c4c4;
+  margin-right: 15px;
+}
+
+.other_project_info_top_l_r {
+  flex: 2;
+}
+
+.other_project_info_top_l_r h4 {
+  line-height: 29.05px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.other_project_info_top_l_r p,
+.skill {
+  line-height: 23.8px;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.other_project_info_bottom {
+  display: flex;
 }
 /* Other-Project section end */
