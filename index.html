@@ -29,7 +29,13 @@
           <a class="logo" href="index.html"><span>J</span></a>
         </div>
         <div class="header_right">
-          <div class="navbar_left">
+          <div class="menu_icon" onclick="{showMenu()}">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </div>
+          <div class="close_menu_icon" onclick="{closeMenu()}">
+            <i class="fa fa-window-close" aria-hidden="true"></i>
+          </div>
+          <div class="navbar_left navbar" id="navbar">
             <ul>
               <li><a href="about.html">about</a></li>
               <li><a href="#experience">experience</a></li>
@@ -37,7 +43,7 @@
               <li><a href="#contact">contact</a></li>
             </ul>
           </div>
-          <div class="navbar_right">
+          <div class="navbar_right" id="navbar">
             <button class="btn">Resume</button>
             <button class="btn">Hire Me</button>
           </div>
@@ -338,10 +344,10 @@
           <button>Write Message</button>
         </div>
       </div>
-      <div class="contact_social_icon">
+      <!-- <div class="contact_social_icon">
         <i class="fa-brands fa-github"></i>
         <i class="fa-brands fa-linkedin"></i>
-      </div>
+      </div> -->
     </section>
     <!-- contact section end -->
 
@@ -350,5 +356,21 @@
       <p>John Smith - 2023</p>
     </footer>
     <!-- footer section end -->
+    <script>
+      function showMenu() {
+        const navbar = document.querySelector("#navbar");
+        const menuIcon = document.querySelector(".menu_icon");
+
+        navbar.style.display = "flex";
+        navbar.remove.classList("menu_icon");
+      }
+
+      function closeMenu() {
+        const navbar = document.querySelector("#navbar");
+        const closeMenuIcon = document.querySelector(".close_menu_icon");
+        navbar.style.display = "none";
+        closeMenuIcon.style.display = "none";
+      }
+    </script>
   </body>
 </html>
