@@ -3,7 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"
+      integrity="sha512-d0olNN35C6VLiulAobxYHZiXJmq+vl+BGIgAxQtD5+kqudro/xNMvv2yIHAciGHpExsIbKX3iLg+0B6d0k4+ZA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./project.html" />
+    <link rel="stylesheet" href="./index.html" />
     <link rel="stylesheet" href="style.css" />
     <title>John Smith</title>
   </head>
@@ -15,21 +30,29 @@
           <a class="logo" href="index.html"><span>J</span></a>
         </div>
         <div class="header_right">
-          <div class="navbar_left">
-            <ul>
-              <li><a href="about.html">about</a></li>
-              <li><a href="#experience">experience</a></li>
-              <li><a href="project.html">project</a></li>
-              <li><a href="#contact">contact</a></li>
-            </ul>
-          </div>
-          <div class="navbar_right">
-            <button class="btn">Resume</button>
-            <button class="btn">Hire Me</button>
+          <i
+            class="fa fa-bars menu_icon"
+            aria-hidden="true"
+            onclick="{showMenu()}"
+          ></i>
+          <div id="navbar" class="navbar">
+            <div class="navbar_left">
+              <ul>
+                <li><a href="about.html">about</a></li>
+                <li><a href="#experience">experience</a></li>
+                <li><a href="project.html">project</a></li>
+                <li><a href="#contact">contact</a></li>
+              </ul>
+            </div>
+            <div class="navbar_right">
+              <button class="btn">Resume</button>
+              <button class="btn">Hire Me</button>
+            </div>
           </div>
         </div>
       </div>
     </header>
+    <!-- header section end -->
 
     <!-- About-me section start -->
     <section id="common-section-gray about">
@@ -76,5 +99,13 @@
       <p>John Smith - 2023</p>
     </footer>
     <!-- footer section end -->
+    <script>
+      const navbar = document.querySelector("#navbar");
+      const menuIcon = document.querySelector(".menu_icon");
+      function showMenu() {
+        navbar.style.display =
+          navbar.style.display === "flex" ? "none" : "flex";
+      }
+    </script>
   </body>
 </html>

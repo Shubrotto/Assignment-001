@@ -94,6 +94,12 @@ body {
   display: none;
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .navbar_left ul {
   display: flex;
 }
@@ -602,7 +608,7 @@ footer p {
   }
 
   #header {
-    padding: 25px 110px 25px 120px;
+    padding: 25px 50px 25px 50px;
   }
 
   .wrapper {
@@ -614,8 +620,11 @@ footer p {
     width: 100%;
   }
 
-  #navbar {
-    /* display: none; */
+  .navbar {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    top: 0;
   }
 
   .header_right {
@@ -629,24 +638,8 @@ footer p {
     position: absolute;
     right: 0;
     top: -48px;
-  }
-
-  .menu_icon i {
     font-size: 24px;
     border: 1px solid #1f1f1f;
-    padding: 2px 5px;
-    cursor: pointer;
-  }
-
-  .close_menu_icon {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: -48px;
-  }
-
-  .close_menu_icon i {
-    font-size: 24px;
     padding: 2px 5px;
     cursor: pointer;
   }
@@ -741,6 +734,11 @@ footer p {
   .experience_top_left h6,
   .experience_top_left p {
     margin-left: 0px;
+    text-align: center;
+  }
+
+  .experience_bottom_right p {
+    text-align: center;
   }
 
   .experience_top_left h4 {
@@ -880,7 +878,7 @@ footer p {
   }
 
   .common-wrapper {
-    padding: 50px 100px 50px 100px;
+    padding: 50px;
   }
 }
 
