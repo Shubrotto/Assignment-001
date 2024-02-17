@@ -355,11 +355,22 @@
     <!-- footer section start -->
     <footer>
       <p>John Smith - 2023</p>
+      <i id="top" class="fa fa-arrow-up click_up" aria-hidden="true"></i>
     </footer>
     <!-- footer section end -->
     <script>
+      const header = document.querySelector("#header");
+      const logo = document.querySelector(".logo");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 0) {
+          header.style.background = "#e7e7e7";
+        } else {
+          header.style.background = "white";
+        }
+      });
       const navbar = document.querySelector("#navbar");
       const menuIcon = document.querySelector(".menu_icon");
+
       function showMenu() {
         navbar.style.display =
           navbar.style.display === "flex" ? "none" : "flex";
