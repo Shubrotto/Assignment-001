@@ -42,7 +42,7 @@
                 <li><a href="about.html">about</a></li>
                 <li><a href="#experience">experience</a></li>
                 <li><a href="project.html">project</a></li>
-                <li><a href="#contact">contact</a></li>
+                <li><a href="contact.html">contact</a></li>
               </ul>
             </div>
             <div class="navbar_right">
@@ -54,6 +54,20 @@
       </div>
     </header>
     <!-- header section end -->
+
+    <!-- info section start -->
+    <section id="Info_section">
+      <div class="wrapper_info">
+        <div class="Info">
+          <h1 class="info_title">Hi, I’m John Smith</h1>
+          <h4 class="info_desc">I design and build things.</h4>
+        </div>
+        <div class="info_img">
+          <img src="./images/info.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- info section end -->
 
     <!-- Feature-Project section start -->
     <section id="common-section-gray">
@@ -216,11 +230,35 @@
     <!-- footer section start -->
     <footer>
       <p>John Smith - 2023</p>
+      <i id="top" class="fa fa-arrow-up click_up" aria-hidden="true"></i>
     </footer>
     <!-- footer section end -->
     <script>
+      const header = document.querySelector("#header");
+      const clickUp = document.querySelector(".click_up");
+      const scrollBtn = document.querySelector("#top");
+      console.log(scrollBtn);
+
+      window.addEventListener("scroll", () => {
+        window.scrollY > 0
+          ? (header.style.background = "#e7e7e7")
+          : (header.style.background = "white");
+        window.pageYOffset > 100
+          ? scrollBtn.classList.add("show_btn")
+          : scrollBtn.classList.remove("show_btn");
+      });
+
+      window.addEventListener("scroll", () => {});
+
+      scrollBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
       const navbar = document.querySelector("#navbar");
       const menuIcon = document.querySelector(".menu_icon");
+
       function showMenu() {
         navbar.style.display =
           navbar.style.display === "flex" ? "none" : "flex";

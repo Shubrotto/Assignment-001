@@ -40,7 +40,7 @@
                 <li><a href="about.html">about</a></li>
                 <li><a href="#experience">experience</a></li>
                 <li><a href="project.html">project</a></li>
-                <li><a href="#contact">contact</a></li>
+                <li><a href="contact.html">contact</a></li>
               </ul>
             </div>
             <div class="navbar_right">
@@ -331,7 +331,7 @@
 
     <!-- contact section start -->
     <section id="common-section-gray contact">
-      <div class="common-wrapper">
+      <div class="common-wrapper contact_wrapper">
         <div class="contact_title_wrapper">
           <hr />
           <h2 class="title">Contact</h2>
@@ -342,7 +342,9 @@
             I am currently seeking employment, and I would appreciate it if you
             could contact me with any available job opportunities.
           </p>
-          <button>Write Message</button>
+        </div>
+        <div class="contact_form_main">
+          <button class="contact_btn">Write Message</button>
         </div>
       </div>
       <!-- <div class="contact_social_icon">
@@ -362,7 +364,9 @@
       const header = document.querySelector("#header");
       const clickUp = document.querySelector(".click_up");
       const scrollBtn = document.querySelector("#top");
-      console.log(scrollBtn);
+      const contactBtn = document.querySelector(".contact_btn");
+      const contactFormMain = document.querySelector(".contact_form_main");
+      console.log(contactFormMain);
 
       window.addEventListener("scroll", () => {
         window.scrollY > 0
@@ -372,8 +376,6 @@
           ? scrollBtn.classList.add("show_btn")
           : scrollBtn.classList.remove("show_btn");
       });
-
-      window.addEventListener("scroll", () => {});
 
       scrollBtn.addEventListener("click", () => {
         window.scrollTo({
@@ -388,6 +390,26 @@
         navbar.style.display =
           navbar.style.display === "flex" ? "none" : "flex";
       }
+
+      contactBtn.addEventListener("click", () => {
+        const form = document.createElement("form");
+        const formDiv = document.createElement("div");
+        const input = document.createElement("input");
+        const btn = document.createElement("button");
+        form.classList.add("form");
+        formDiv.classList.add("formDiv");
+        btn.classList.add("button");
+        btn.innerText = "SEND FEEDBACK";
+        form.innerHTML = `<div><lebel>First Name</lebel> <input /></div> 
+          <div><lebel>Last Name</lebel> <input /></div> 
+          <div><lebel>Mobile No</lebel> <input /></div> 
+          <div><lebel>Email</lebel> <input /></div> 
+          <div><lebel>Message</lebel> <textarea name="" id="" cols="30" rows="10"></textarea> </div>`;
+        form.appendChild(formDiv);
+        form.appendChild(btn);
+        contactFormMain.appendChild(form);
+        contactBtn.style.display = "none";
+      });
     </script>
   </body>
 </html>

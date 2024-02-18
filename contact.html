@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./about.html" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"
@@ -17,8 +18,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./project.html" />
     <link rel="stylesheet" href="./index.html" />
+    <link rel="stylesheet" href="./about.html" />
+    <link rel="stylesheet" href="./project.html" />
     <link rel="stylesheet" href="style.css" />
     <title>John Smith</title>
   </head>
@@ -68,47 +70,31 @@
     </section>
     <!-- info section end -->
 
-    <!-- About-me section start -->
-    <section id="common-section-gray about">
-      <div class="common-wrapper">
-        <div class="title_wrapper">
+    <!-- contact section start -->
+    <section id="common-section-gray contact">
+      <div class="common-wrapper contact_wrapper">
+        <div class="contact_title_wrapper">
           <hr />
-          <h2 class="title">About Me</h2>
+          <h2 class="title">Contact</h2>
           <hr />
         </div>
-        <div class="about_me_info">
-          <div class="about_me_info_left">
-            <div class="about_me_desc">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Praesent sit amet vestibulum felis. Vivamus facilisis ligula id
-                fringilla gravida. Suspendisse ultricies sollicitudin lacus, et
-                rutrum nunc bibendum sed.
-              </p>
-              <p>
-                Donec tincidunt tellus sed libero ultricies, eu semper enim
-                molestie. Etiam lorem quam, tincidunt nec malesuada eu, interdum
-                nec leo. Vestibulum ante ipsum primis in faucibus orci luctus et
-                ultrices posuere cubilia curae; Morbi placerat tortor sed felis
-                tristique.
-              </p>
-              <p>
-                Nunc aliquam magna ut nunc vestibulum, ut dictum nulla sagittis.
-                Cras egestas magna sed nisl pellentesque, sed lobortis felis
-                convallis. Phasellus eget ex at est lobortis iaculis eget non
-                risus. Etiam ultricies at est sit amet condimentum.
-              </p>
-            </div>
-          </div>
-          <div class="about_me_info_right">
-            <img src="./images/my.jpg" alt="my image" />
-          </div>
+        <div class="contact_form">
+          <p>
+            I am currently seeking employment, and I would appreciate it if you
+            could contact me with any available job opportunities.
+          </p>
+        </div>
+        <div class="contact_form_main">
+          <button class="contact_btn">Write Message</button>
         </div>
       </div>
+      <!-- <div class="contact_social_icon">
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div> -->
     </section>
-    <!-- About-me section end -->
+    <!-- contact section end -->
 
-    <!-- footer section start -->
     <!-- footer section start -->
     <footer>
       <p>John Smith - 2023</p>
@@ -119,7 +105,9 @@
       const header = document.querySelector("#header");
       const clickUp = document.querySelector(".click_up");
       const scrollBtn = document.querySelector("#top");
-      console.log(scrollBtn);
+      const contactBtn = document.querySelector(".contact_btn");
+      const contactFormMain = document.querySelector(".contact_form_main");
+      console.log(contactFormMain);
 
       window.addEventListener("scroll", () => {
         window.scrollY > 0
@@ -129,8 +117,6 @@
           ? scrollBtn.classList.add("show_btn")
           : scrollBtn.classList.remove("show_btn");
       });
-
-      window.addEventListener("scroll", () => {});
 
       scrollBtn.addEventListener("click", () => {
         window.scrollTo({
@@ -145,6 +131,26 @@
         navbar.style.display =
           navbar.style.display === "flex" ? "none" : "flex";
       }
+
+      contactBtn.addEventListener("click", () => {
+        const form = document.createElement("form");
+        const formDiv = document.createElement("div");
+        const input = document.createElement("input");
+        const btn = document.createElement("button");
+        form.classList.add("form");
+        formDiv.classList.add("formDiv");
+        btn.classList.add("button");
+        btn.innerText = "SEND FEEDBACK";
+        form.innerHTML = `<div><lebel>First Name</lebel> <input /></div> 
+          <div><lebel>Last Name</lebel> <input /></div> 
+          <div><lebel>Mobile No</lebel> <input /></div> 
+          <div><lebel>Email</lebel> <input /></div> 
+          <div><lebel>Message</lebel> <textarea name="" id="" cols="30" rows="10"></textarea> </div>`;
+        form.appendChild(formDiv);
+        form.appendChild(btn);
+        contactFormMain.appendChild(form);
+        contactBtn.style.display = "none";
+      });
     </script>
   </body>
 </html>
