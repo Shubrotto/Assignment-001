@@ -60,8 +60,8 @@
           <h1 class="info_title">Hi, I’m John Smith</h1>
           <h4 class="info_desc">I design and build things.</h4>
         </div>
-        <div class="info_arrow">
-          <i class="fa fa-angles-down"></i>
+        <div class="info_img">
+          <img src="./images/info.jpg" alt="" />
         </div>
       </div>
     </section>
@@ -360,13 +360,26 @@
     <!-- footer section end -->
     <script>
       const header = document.querySelector("#header");
-      const logo = document.querySelector(".logo");
+      const clickUp = document.querySelector(".click_up");
+      const scrollBtn = document.querySelector("#top");
+      console.log(scrollBtn);
+
       window.addEventListener("scroll", () => {
-        if (window.scrollY > 0) {
-          header.style.background = "#e7e7e7";
-        } else {
-          header.style.background = "white";
-        }
+        window.scrollY > 0
+          ? (header.style.background = "#e7e7e7")
+          : (header.style.background = "white");
+        window.pageYOffset > 100
+          ? scrollBtn.classList.add("show_btn")
+          : scrollBtn.classList.remove("show_btn");
+      });
+
+      window.addEventListener("scroll", () => {});
+
+      scrollBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
       });
       const navbar = document.querySelector("#navbar");
       const menuIcon = document.querySelector(".menu_icon");
