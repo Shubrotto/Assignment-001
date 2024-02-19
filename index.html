@@ -38,7 +38,17 @@
             <div class="navbar_left">
               <ul>
                 <li><a href="about.html">about</a></li>
-                <li><a href="#experience">experience</a></li>
+                <li>
+                  <a class="collapse" href="#experience"
+                    >experience
+                    <span class="sub_nav">
+                      <ul>
+                        <li>experi 1</li>
+                        <li>experi 2</li>
+                      </ul>
+                    </span>
+                  </a>
+                </li>
                 <li><a href="project.html">project</a></li>
                 <li><a href="contact.html">contact</a></li>
               </ul>
@@ -367,6 +377,7 @@
       const scrollBtn = document.querySelector("#top");
       const contactBtn = document.querySelector(".contact_btn");
       const contactFormMain = document.querySelector(".contact_form_main");
+      const subNavClick = document.querySelector(".collapse");
       // now i use mouseevent,
 
       window.addEventListener("scroll", () => {

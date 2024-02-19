@@ -121,6 +121,37 @@ body {
   font-weight: normal;
 }
 
+.collapse {
+  position: relative;
+}
+
+.collapse:hover .sub_nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.sub_nav {
+  display: none;
+  position: absolute;
+  margin-top: 10px;
+}
+
+.sub_nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: 5px;
+}
+
+.sub_nav ul li {
+  padding: 10px 13px;
+}
+
+.sub_nav ul li:hover {
+  background: tomato;
+  color: white;
+}
+
 .navbar_text {
   color: white;
 }
@@ -932,6 +963,10 @@ footer p {
 
   .navbar_left ul li a:hover {
     background: tomato;
+  }
+
+  .sub_nav ul {
+    margin-left: 100px;
   }
 
   .navbar_right {
