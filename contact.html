@@ -137,18 +137,16 @@
         const formDiv = document.createElement("div");
         const input = document.createElement("input");
         const btn = document.createElement("button");
-        form.classList.add("form");
         formDiv.classList.add("formDiv");
         btn.classList.add("button");
         btn.innerText = "SEND FEEDBACK";
-        form.innerHTML = `<div><lebel>First Name</lebel> <input /></div> 
-          <div><lebel>Last Name</lebel> <input /></div> 
-          <div><lebel>Mobile No</lebel> <input /></div> 
-          <div><lebel>Email</lebel> <input /></div> 
+        formDiv.innerHTML = `<div><lebel>First Name</lebel> <input required /></div>
+          <div><lebel>Last Name</lebel> <input /></div>
+          <div><lebel>Mobile No</lebel> <input /></div>
+          <div><lebel>Email</lebel> <input /></div>
           <div><lebel>Message</lebel> <textarea name="" id="" cols="30" rows="10"></textarea> </div>`;
-        form.appendChild(formDiv);
-        form.appendChild(btn);
-        contactFormMain.appendChild(form);
+        formDiv.appendChild(btn);
+        contactFormMain.appendChild(formDiv);
         contactBtn.style.display = "none";
       });
     </script>

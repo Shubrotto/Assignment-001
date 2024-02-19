@@ -621,9 +621,6 @@ p {
   border-radius: 5px;
   border: 1px solid #1f1f1f;
   cursor: pointer;
-  position: absolute;
-  bottom: 20px;
-  right: 230px;
   transition: 0.6s ease-in-out;
 }
 
@@ -646,7 +643,11 @@ p {
   font-size: 20px;
 }
 
-.form {
+/* .form {
+  padding: 15px 10px;
+} */
+
+.formDiv {
   width: 70%;
   padding: 15px 10px;
   box-shadow: -5px 7px 23px 3px rgba(0, 0, 0, 0.75);
@@ -661,14 +662,25 @@ p {
   transition: 0.6s ease-in-out;
 }
 
-.form:hover {
-  box-shadow: -5px 7px 23px 3px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.6);
+.formDiv > div {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
 }
 
-.formDiv {
-  display: flex;
-  /* flex: 1; */
+.formDiv lebel {
+  margin-right: 5px;
+}
+
+.formDiv textarea {
+  resize: none;
+  height: 50px;
+  width: 58%;
+}
+
+.formDiv:hover {
+  box-shadow: -5px 7px 23px 3px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.6);
 }
 /* contact section end */
 
@@ -818,6 +830,10 @@ footer p {
   .experience_top_left h6 {
     padding-left: 8px;
   }
+  /* 
+  .form {
+    flex-direction: column;
+  } */
 }
 
 @media screen and (max-width: 968px) {
@@ -1043,6 +1059,10 @@ footer p {
 
   .other-wrapper {
     padding: 0 50px 50px 50px;
+  }
+
+  .formDiv {
+    width: 90%;
   }
 }
 
