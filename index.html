@@ -421,6 +421,16 @@
         formDiv.appendChild(btn);
         contactFormMain.appendChild(formDiv);
         contactBtn.style.display = "none";
+
+        formDiv.addEventListener("mouseenter", () => {
+          formDiv.style.background = "coral";
+          formDiv.style.color = "white";
+        });
+
+        formDiv.addEventListener("mouseleave", () => {
+          formDiv.style.background = "";
+          formDiv.style.color = "";
+        });
       });
     </script>
   </body>
