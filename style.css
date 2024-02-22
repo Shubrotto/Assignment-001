@@ -933,6 +933,12 @@ footer p {
 }
 
 @media screen and (max-width: 1081px) {
+  .btn {
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 1081px) {
   .info_title {
     font-size: 60px;
   }
