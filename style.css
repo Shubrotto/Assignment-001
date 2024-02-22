@@ -350,31 +350,33 @@ body {
 
 .experience_top_left {
   flex: 1;
-  margin: 20px 0;
+  margin: 20px 20px;
 }
 
 .experience_top_left h4,
 .experience_top_left h6,
 .experience_top_left p {
-  margin-left: 70px;
+  margin-left: 0;
 }
 
 .experience_top_left h4 {
   font-size: 24px;
-  padding-left: 16px;
   font-weight: 400;
   line-height: 29.05px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .experience_top_left h6 {
   font-size: 16px;
   font-weight: 400;
   line-height: 19.36px;
-  padding-left: 15px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .experience_top_left hr {
-  margin: 13px 20px 15px 0px;
+  margin: 13px 0 15px 0px;
   border: 0.5px solid #1f1f1f;
   opacity: 0.5;
 }
@@ -383,6 +385,8 @@ body {
   font-size: 14px;
   font-weight: 400;
   line-height: 23.8px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .experience_border {
@@ -965,6 +969,12 @@ footer p {
 }
 
 @media screen and (max-width: 1212px) {
+  .common-wrapper {
+    padding: 100px 220px 100px 220px;
+  }
+}
+
+@media screen and (max-width: 1212px) {
   #header {
     padding: 25px 120px 25px 130px;
   }
@@ -985,8 +995,14 @@ footer p {
 }
 
 @media screen and (max-width: 1203px) {
-  .formDiv {
-    padding: 45px 60px;
+  .formDiv textarea {
+    width: 58%;
+  }
+}
+
+@media screen and (max-width: 1186px) {
+  .other-wrapper {
+    padding: 0 220px 100px 220px;
   }
 }
 
@@ -1226,6 +1242,9 @@ footer p {
   .info_img div {
     display: none;
   }
+  .other-wrapper {
+    padding: 50px 120px;
+  }
 
   .experience_top_left h4 {
     padding-left: 8px;
@@ -1275,6 +1294,30 @@ footer p {
   .feat_pro_in_top_l,
   .feat_pro_in_bottom_r {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 958px) {
+  .experience_top_left p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .experience_top_left h6 {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  .experience_top_left h6 {
+    font-size: 14px;
+  }
+
+  .experience_top_left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
