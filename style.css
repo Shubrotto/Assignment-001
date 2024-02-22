@@ -730,10 +730,14 @@ p {
 }
 
 .contact_social_icon {
-  position: absolute;
-  bottom: -210.8rem;
-  left: 41rem;
-  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: large;
+}
+
+.contact_social_icon i {
+  margin: 0 10px;
 }
 
 .formDiv {
@@ -1331,10 +1335,6 @@ footer p {
     text-align: justify;
   }
 
-  .experience_bottom {
-    display: block;
-  }
-
   .formDiv textarea {
     width: 60%;
   }
@@ -1390,10 +1390,6 @@ footer p {
   .other_project_info_top,
   .other_project_info_bottom {
     flex-wrap: wrap;
-  }
-
-  .contact_social_icon {
-    display: none;
   }
 
   .contact_title_wrapper hr {
