@@ -234,36 +234,7 @@
       <i id="top" class="fa fa-arrow-up click_up" aria-hidden="true"></i>
     </footer>
     <!-- footer section end -->
-    <script>
-      const header = document.querySelector("#header");
-      const clickUp = document.querySelector(".click_up");
-      const scrollBtn = document.querySelector("#top");
-      console.log(scrollBtn);
 
-      window.addEventListener("scroll", () => {
-        window.scrollY > 0
-          ? (header.style.background = "#e7e7e7")
-          : (header.style.background = "white");
-        window.pageYOffset > 100
-          ? scrollBtn.classList.add("show_btn")
-          : scrollBtn.classList.remove("show_btn");
-      });
-
-      window.addEventListener("scroll", () => {});
-
-      scrollBtn.addEventListener("click", () => {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      });
-      const navbar = document.querySelector("#navbar");
-      const menuIcon = document.querySelector(".menu_icon");
-
-      function showMenu() {
-        navbar.style.display =
-          navbar.style.display === "flex" ? "none" : "flex";
-      }
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>

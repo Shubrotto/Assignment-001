@@ -215,6 +215,7 @@ body {
   position: absolute;
   bottom: 120px;
   color: #7c7c7c;
+  font-size: 32px;
 }
 
 .info_title {
@@ -1241,6 +1242,11 @@ footer p {
   .formDiv {
     width: 55%;
   }
+  .experience_bottom {
+    display: flex;
+    transition: 0.6s ease-in-out;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 968px) {
@@ -1320,6 +1326,10 @@ footer p {
   .experience_border_sec,
   .experience_bottom_right hr {
     display: none;
+  }
+
+  .experience_bottom {
+    flex-direction: column;
   }
 
   .experience_bottom_right {
