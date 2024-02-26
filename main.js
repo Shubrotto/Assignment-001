@@ -4,8 +4,17 @@ const scrollBtn = document.querySelector("#top");
 const contactBtn = document.querySelector(".contact_btn");
 const contactFormMain = document.querySelector(".contact_form_main");
 const subNavClick = document.querySelector(".collapse");
-// now i use mouseevent,
-
+const NavLists = document.querySelector(".nav_lists");
+const NavListItems = document.getElementsByClassName(".nav_list");
+for (let i = 0; i < NavListItems.length; i++) {
+  NavListItems.classList.add("active");
+  NavListItems[i].addEventListener("click", () => {
+    const active = document.getElementsByClassName("active");
+    console.log(active);
+    active[0].className = active.className.replace("active", "");
+    this.className += " active";
+  });
+}
 window.addEventListener("scroll", () => {
   window.scrollY > 0
     ? (header.style.background = "#e7e7e7")
@@ -59,23 +68,23 @@ contactBtn.addEventListener("click", () => {
   });
 });
 
-const st = [
-  {
-    id: 1,
-    name: "sk",
-    age: 22,
-  },
-  {
-    id: 2,
-    name: "fk",
-    age: 25,
-  },
-  {
-    id: 3,
-    name: "hf",
-    age: 30,
-  },
-];
+// const st = [
+//   {
+//     id: 1,
+//     name: "sk",
+//     age: 22,
+//   },
+//   {
+//     id: 2,
+//     name: "fk",
+//     age: 25,
+//   },
+//   {
+//     id: 3,
+//     name: "hf",
+//     age: 30,
+//   },
+// ];
 
-const names = st.map((s) => "His Name is " + s.name + " and age is " + s.age);
-console.log(names);
+// const names = st.map((s) => "His Name is " + s.name + " and age is " + s.age);
+// console.log(names);
