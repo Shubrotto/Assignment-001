@@ -4,16 +4,17 @@ const scrollBtn = document.querySelector("#top");
 const contactBtn = document.querySelector(".contact_btn");
 const contactFormMain = document.querySelector(".contact_form_main");
 const subNavClick = document.querySelector(".collapse");
-const NavLists = document.querySelector(".nav_lists");
-const NavListItems = document.getElementsByClassName(".nav_list");
-for (let i = 0; i < NavListItems.length; i++) {
-  NavListItems.classList.add("active");
-  NavListItems[i].addEventListener("click", () => {
-    const active = document.getElementsByClassName("active");
-    console.log(active);
-    active[0].className = active.className.replace("active", "");
-    this.className += " active";
-  });
+const NavLinkItems = document.querySelectorAll(".nav_link");
+if (NavLinkItems.length) {
+  NavLinkItems.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      item.forEach((i) => {
+        i.classList.remove("active");
+      });
+      e.preventDefault();
+      i.classList.add("active");
+    });
+  }); // problem is here
 }
 window.addEventListener("scroll", () => {
   window.scrollY > 0

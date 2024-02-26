@@ -116,7 +116,11 @@ body {
   padding: 12px 10px;
 }
 
-.active .nav_list:hover {
+/* .active.nav_link:active {
+  background: teal;
+} */
+
+.nav_link.active {
   background: teal;
 }
 
